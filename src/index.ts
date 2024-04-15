@@ -175,6 +175,7 @@ export default function createIntegration(args?: Options): AstroIntegration {
 					external: [
 						...COMPATIBLE_NODE_MODULES.map((mod) => `node:${mod}`),
 						'@astrojs/markdown-remark',
+						...(_vite?.ssr?.external ?? []),
 					],
 					plugins: [denoImportsShimPlugin, denoRenameNodeModulesPlugin],
 					banner: {
