@@ -1,7 +1,7 @@
 {
   "name": "freestyle-deno-astro-adapter",
   "description": "Deploy your Astro site to a Deno server",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "type": "module",
   "author": "denoland",
   "license": "MIT",
