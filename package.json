@@ -1,5 +1,5 @@
 {
-  "name": "@astrojs/deno",
+  "name": "freestyle-deno-astro-adapter",
   "description": "Deploy your Astro site to a Deno server",
   "version": "5.0.1",
   "type": "module",
