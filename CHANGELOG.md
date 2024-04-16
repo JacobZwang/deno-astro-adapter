@@ -1,4 +1,4 @@
-# @astrojs/deno
+# freestyle-deno-astro-adapter
 
 ## 5.0.0
 

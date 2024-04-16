@@ -75,8 +75,8 @@ export { fromFileUrl } from "https://deno.land/std@${DENO_VERSION}/path/mod.ts";
 
 export function getAdapter(args?: Options): AstroAdapter {
   return {
-    name: "@astrojs/deno",
-    serverEntrypoint: "@astrojs/deno/server.ts",
+    name: "freestyle-deno-astro-adapter",
+    serverEntrypoint: "freestyle-deno-astro-adapter/server.ts",
     args: args ?? {},
     exports: ["stop", "handle", "start", "running"],
     supportedAstroFeatures: {
@@ -93,7 +93,7 @@ export function getAdapter(args?: Options): AstroAdapter {
 }
 
 const denoImportsShimPlugin = {
-  name: "@astrojs/deno:shim",
+  name: "freestyle-deno-astro-adapter:shim",
   setup(build: esbuild.PluginBuild) {
     build.onLoad({ filter: /__deno_imports\.ts$/ }, async () => {
       return {
@@ -121,7 +121,7 @@ export default function createIntegration(args?: Options): AstroIntegration {
   let _buildConfig: BuildConfig;
   let _vite: any;
   return {
-    name: "@astrojs/deno",
+    name: "freestyle-deno-astro-adapter",
     hooks: {
       "astro:config:done": ({ setAdapter, config }) => {
         setAdapter(getAdapter(args));
@@ -129,10 +129,10 @@ export default function createIntegration(args?: Options): AstroIntegration {
 
         if (config.output === "static") {
           console.warn(
-            `[@astrojs/deno] \`output: "server"\` or \`output: "hybrid"\` is required to use this adapter.`
+            `[freestyle-deno-astro-adapter] \`output: "server"\` or \`output: "hybrid"\` is required to use this adapter.`
           );
           console.warn(
-            `[@astrojs/deno] Otherwise, this adapter is not required to deploy a static site to Deno.`
+            `[freestyle-deno-astro-adapter] Otherwise, this adapter is not required to deploy a static site to Deno.`
           );
         }
       },

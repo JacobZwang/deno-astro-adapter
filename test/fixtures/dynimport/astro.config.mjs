@@ -1,7 +1,7 @@
-import { defineConfig } from 'astro/config';
-import deno from '@astrojs/deno';
+import { defineConfig } from "astro/config";
+import deno from "freestyle-deno-astro-adapter";
 
 export default defineConfig({
-	adapter: deno(),
-	output: 'server'
-})
+  adapter: deno(),
+  output: "server",
+});

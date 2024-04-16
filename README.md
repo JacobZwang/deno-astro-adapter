@@ -1,4 +1,4 @@
-# @astrojs/deno 🦖
+# freestyle-deno-astro-adapter 🦖
 
 This adapter allows Astro to deploy your SSR site to Deno targets.
 
@@ -39,7 +39,7 @@ If you prefer to install the adapter manually instead, complete the following tw
 1. Install the Deno adapter to your project’s dependencies using your preferred package manager. If you’re using npm or aren’t sure, run this in the terminal:
 
    ```bash
-     npm install @astrojs/deno
+     npm install freestyle-deno-astro-adapter
    ```
 
 1. Update your `astro.config.mjs` project configuration file with the changes below.
@@ -47,7 +47,7 @@ If you prefer to install the adapter manually instead, complete the following tw
    ```js ins={3,6-7}
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import deno from '@astrojs/deno';
+   import deno from 'freestyle-deno-astro-adapter';
 
    export default defineConfig({
      output: 'server',
@@ -99,7 +99,7 @@ To configure this adapter, pass an object to the `deno()` function call in `astr
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import deno from '@astrojs/deno';
+import deno from 'freestyle-deno-astro-adapter';
 
 export default defineConfig({
   output: 'server',
@@ -115,7 +115,7 @@ This adapter automatically starts a server when it is imported. You can turn thi
 
 ```js
 import { defineConfig } from 'astro/config';
-import deno from '@astrojs/deno';
+import deno from 'freestyle-deno-astro-adapter';
 
 export default defineConfig({
   output: 'server',
@@ -144,7 +144,7 @@ You can set the port (default: `8085`) and hostname (default: `0.0.0.0`) for the
 
 ```js
 import { defineConfig } from 'astro/config';
-import deno from '@astrojs/deno';
+import deno from 'freestyle-deno-astro-adapter';
 
 export default defineConfig({
   output: 'server',
