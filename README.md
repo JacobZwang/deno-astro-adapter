@@ -3,9 +3,9 @@
 This adapter allows Astro to deploy your SSR site to freestyle.sh.
 
 ## Configuration
-Install the Freestyle adapter to your project’s dependencies using your preferred package manager.
+Install the Freestyle adapter and other required dependencies using your preferred package manager.
 ```sh
-npm install -D freestyle-deno-astro-adapter
+npm install -D freestyle-deno-astro-adapter sharp
 ```
 
 Update your `astro.config.mjs` project configuration file with the changes below.
